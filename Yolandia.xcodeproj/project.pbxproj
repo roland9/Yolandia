@@ -1,0 +1,412 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ABBD85B219537FFD000C4FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD85B119537FFD000C4FEC /* AppDelegate.swift */; };
+		ABBD85B419537FFD000C4FEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD85B319537FFD000C4FEC /* ViewController.swift */; };
+		ABBD85B719537FFD000C4FEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABBD85B519537FFD000C4FEC /* Main.storyboard */; };
+		ABBD85B919537FFD000C4FEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABBD85B819537FFD000C4FEC /* Images.xcassets */; };
+		ABBD85C519537FFD000C4FEC /* YolandiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD85C419537FFD000C4FEC /* YolandiaTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ABBD85BF19537FFD000C4FEC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABBD85A419537FFD000C4FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABBD85AB19537FFD000C4FEC;
+			remoteInfo = Yolandia;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ABBD85AC19537FFD000C4FEC /* Yolandia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yolandia.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABBD85B019537FFD000C4FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABBD85B119537FFD000C4FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ABBD85B319537FFD000C4FEC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		ABBD85B619537FFD000C4FEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ABBD85B819537FFD000C4FEC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		ABBD85BE19537FFD000C4FEC /* YolandiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YolandiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		ABBD85C319537FFD000C4FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ABBD85C419537FFD000C4FEC /* YolandiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YolandiaTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ABBD85A919537FFD000C4FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABBD85BB19537FFD000C4FEC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ABBD85A319537FFD000C4FEC = {
+			isa = PBXGroup;
+			children = (
+				ABBD85AE19537FFD000C4FEC /* Yolandia */,
+				ABBD85C119537FFD000C4FEC /* YolandiaTests */,
+				ABBD85AD19537FFD000C4FEC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ABBD85AD19537FFD000C4FEC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ABBD85AC19537FFD000C4FEC /* Yolandia.app */,
+				ABBD85BE19537FFD000C4FEC /* YolandiaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABBD85AE19537FFD000C4FEC /* Yolandia */ = {
+			isa = PBXGroup;
+			children = (
+				ABBD85B119537FFD000C4FEC /* AppDelegate.swift */,
+				ABBD85B319537FFD000C4FEC /* ViewController.swift */,
+				ABBD85B519537FFD000C4FEC /* Main.storyboard */,
+				ABBD85B819537FFD000C4FEC /* Images.xcassets */,
+				ABBD85AF19537FFD000C4FEC /* Supporting Files */,
+			);
+			path = Yolandia;
+			sourceTree = "<group>";
+		};
+		ABBD85AF19537FFD000C4FEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABBD85B019537FFD000C4FEC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ABBD85C119537FFD000C4FEC /* YolandiaTests */ = {
+			isa = PBXGroup;
+			children = (
+				ABBD85C419537FFD000C4FEC /* YolandiaTests.swift */,
+				ABBD85C219537FFD000C4FEC /* Supporting Files */,
+			);
+			path = YolandiaTests;
+			sourceTree = "<group>";
+		};
+		ABBD85C219537FFD000C4FEC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABBD85C319537FFD000C4FEC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ABBD85AB19537FFD000C4FEC /* Yolandia */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABBD85C819537FFD000C4FEC /* Build configuration list for PBXNativeTarget "Yolandia" */;
+			buildPhases = (
+				ABBD85A819537FFD000C4FEC /* Sources */,
+				ABBD85A919537FFD000C4FEC /* Frameworks */,
+				ABBD85AA19537FFD000C4FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yolandia;
+			productName = Yolandia;
+			productReference = ABBD85AC19537FFD000C4FEC /* Yolandia.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ABBD85BD19537FFD000C4FEC /* YolandiaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ABBD85CB19537FFD000C4FEC /* Build configuration list for PBXNativeTarget "YolandiaTests" */;
+			buildPhases = (
+				ABBD85BA19537FFD000C4FEC /* Sources */,
+				ABBD85BB19537FFD000C4FEC /* Frameworks */,
+				ABBD85BC19537FFD000C4FEC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ABBD85C019537FFD000C4FEC /* PBXTargetDependency */,
+			);
+			name = YolandiaTests;
+			productName = YolandiaTests;
+			productReference = ABBD85BE19537FFD000C4FEC /* YolandiaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ABBD85A419537FFD000C4FEC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = mapps;
+				TargetAttributes = {
+					ABBD85AB19537FFD000C4FEC = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					ABBD85BD19537FFD000C4FEC = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = ABBD85AB19537FFD000C4FEC;
+					};
+				};
+			};
+			buildConfigurationList = ABBD85A719537FFD000C4FEC /* Build configuration list for PBXProject "Yolandia" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ABBD85A319537FFD000C4FEC;
+			productRefGroup = ABBD85AD19537FFD000C4FEC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ABBD85AB19537FFD000C4FEC /* Yolandia */,
+				ABBD85BD19537FFD000C4FEC /* YolandiaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ABBD85AA19537FFD000C4FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABBD85B719537FFD000C4FEC /* Main.storyboard in Resources */,
+				ABBD85B919537FFD000C4FEC /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABBD85BC19537FFD000C4FEC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ABBD85A819537FFD000C4FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABBD85B419537FFD000C4FEC /* ViewController.swift in Sources */,
+				ABBD85B219537FFD000C4FEC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ABBD85BA19537FFD000C4FEC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABBD85C519537FFD000C4FEC /* YolandiaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ABBD85C019537FFD000C4FEC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABBD85AB19537FFD000C4FEC /* Yolandia */;
+			targetProxy = ABBD85BF19537FFD000C4FEC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ABBD85B519537FFD000C4FEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ABBD85B619537FFD000C4FEC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ABBD85C619537FFD000C4FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ABBD85C719537FFD000C4FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ABBD85C919537FFD000C4FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Yolandia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		ABBD85CA19537FFD000C4FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = Yolandia/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		ABBD85CC19537FFD000C4FEC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Yolandia.app/Yolandia";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = YolandiaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		ABBD85CD19537FFD000C4FEC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Yolandia.app/Yolandia";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = YolandiaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ABBD85A719537FFD000C4FEC /* Build configuration list for PBXProject "Yolandia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABBD85C619537FFD000C4FEC /* Debug */,
+				ABBD85C719537FFD000C4FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ABBD85C819537FFD000C4FEC /* Build configuration list for PBXNativeTarget "Yolandia" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABBD85C919537FFD000C4FEC /* Debug */,
+				ABBD85CA19537FFD000C4FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		ABBD85CB19537FFD000C4FEC /* Build configuration list for PBXNativeTarget "YolandiaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ABBD85CC19537FFD000C4FEC /* Debug */,
+				ABBD85CD19537FFD000C4FEC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ABBD85A419537FFD000C4FEC /* Project object */;
+}
