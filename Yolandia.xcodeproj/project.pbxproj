@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB5FE59519538BFA007E3053 /* UserRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FE59419538BFA007E3053 /* UserRecord.swift */; };
 		ABBD85B219537FFD000C4FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD85B119537FFD000C4FEC /* AppDelegate.swift */; };
 		ABBD85B419537FFD000C4FEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD85B319537FFD000C4FEC /* ViewController.swift */; };
 		ABBD85B719537FFD000C4FEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABBD85B519537FFD000C4FEC /* Main.storyboard */; };
 		ABBD85B919537FFD000C4FEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABBD85B819537FFD000C4FEC /* Images.xcassets */; };
 		ABBD85C519537FFD000C4FEC /* YolandiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD85C419537FFD000C4FEC /* YolandiaTests.swift */; };
+		ABBD85D0195385BE000C4FEC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABBD85CF195385BE000C4FEC /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +27,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB5FE59419538BFA007E3053 /* UserRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRecord.swift; path = Yolandia/UserRecord.swift; sourceTree = "<group>"; };
+		AB5FE59619538EC3007E3053 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = Yolandia/MyPlayground.playground; sourceTree = "<group>"; };
 		ABBD85AC19537FFD000C4FEC /* Yolandia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yolandia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABBD85B019537FFD000C4FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABBD85B119537FFD000C4FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +38,8 @@
 		ABBD85BE19537FFD000C4FEC /* YolandiaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YolandiaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABBD85C319537FFD000C4FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABBD85C419537FFD000C4FEC /* YolandiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YolandiaTests.swift; sourceTree = "<group>"; };
+		ABBD85CE195385AD000C4FEC /* Yolandia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Yolandia.entitlements; sourceTree = "<group>"; };
+		ABBD85CF195385BE000C4FEC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABBD85D0195385BE000C4FEC /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +64,9 @@
 		ABBD85A319537FFD000C4FEC = {
 			isa = PBXGroup;
 			children = (
+				AB5FE59619538EC3007E3053 /* MyPlayground.playground */,
+				AB5FE59419538BFA007E3053 /* UserRecord.swift */,
+				ABBD85CF195385BE000C4FEC /* CloudKit.framework */,
 				ABBD85AE19537FFD000C4FEC /* Yolandia */,
 				ABBD85C119537FFD000C4FEC /* YolandiaTests */,
 				ABBD85AD19537FFD000C4FEC /* Products */,
@@ -75,6 +85,7 @@
 		ABBD85AE19537FFD000C4FEC /* Yolandia */ = {
 			isa = PBXGroup;
 			children = (
+				ABBD85CE195385AD000C4FEC /* Yolandia.entitlements */,
 				ABBD85B119537FFD000C4FEC /* AppDelegate.swift */,
 				ABBD85B319537FFD000C4FEC /* ViewController.swift */,
 				ABBD85B519537FFD000C4FEC /* Main.storyboard */,
@@ -158,6 +169,12 @@
 				TargetAttributes = {
 					ABBD85AB19537FFD000C4FEC = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 2H43Y8J8SC;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 					ABBD85BD19537FFD000C4FEC = {
 						CreatedOnToolsVersion = 6.0;
@@ -209,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABBD85B419537FFD000C4FEC /* ViewController.swift in Sources */,
+				AB5FE59519538BFA007E3053 /* UserRecord.swift in Sources */,
 				ABBD85B219537FFD000C4FEC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,9 +343,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Yolandia/Yolandia.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Yolandia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -336,9 +358,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = Yolandia/Yolandia.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Yolandia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -397,6 +423,7 @@
 				ABBD85CA19537FFD000C4FEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ABBD85CB19537FFD000C4FEC /* Build configuration list for PBXNativeTarget "YolandiaTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +432,7 @@
 				ABBD85CD19537FFD000C4FEC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
