@@ -11,18 +11,24 @@ import CloudKit
 
 class User {
     
-    class func saveUser(userName: String) -> Bool {
-        println("trying to save \(userName)")
-
-        let publicDatabase = CKContainer.defaultContainer().publicCloudDatabase
-        let user = CKRecord(recordType: "MyUser")
-        user.setObject("Roland", forKey:"userName")
-
-        publicDatabase.saveRecord(user, completionHandler: {(savedRecord, error) in
-            println("saved: \(savedRecord)  \(error)")
-            })
+    class func saveUser(userName: String, completionHandler: ((CKRecord!, NSError!) -> Void)!) {
         
-        return true
+        println("trying to save User with userName=\(userName)")
+        
+        let publicDatabase = CKContainer.defaultContainer().publicCloudDatabase
+        var user = CKRecord(recordType: "MyUser")
+        
+        user.setObject(userName, forKey:"userName")
+        user.setObject(NSDate(), forKey:"signupDate")
+        
+        publicDatabase.saveRecord(user, completionHandler: {(savedRecord, error) in
+            if (!error) {
+                println("saved record: \(savedRecord)")
+                
+            } else {
+                println("ERROR \(error.localizedDescription) saving record")
+            }
+            })
     }
     
 }

@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB06785F195648B800E4C594 /* UserRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FE59419538BFA007E3053 /* UserRecord.swift */; };
 		AB5FE59519538BFA007E3053 /* UserRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FE59419538BFA007E3053 /* UserRecord.swift */; };
 		ABBD85B219537FFD000C4FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD85B119537FFD000C4FEC /* AppDelegate.swift */; };
 		ABBD85B419537FFD000C4FEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD85B319537FFD000C4FEC /* ViewController.swift */; };
 		ABBD85B719537FFD000C4FEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABBD85B519537FFD000C4FEC /* Main.storyboard */; };
 		ABBD85B919537FFD000C4FEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABBD85B819537FFD000C4FEC /* Images.xcassets */; };
 		ABBD85C519537FFD000C4FEC /* YolandiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD85C419537FFD000C4FEC /* YolandiaTests.swift */; };
-		ABBD85D0195385BE000C4FEC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABBD85CF195385BE000C4FEC /* CloudKit.framework */; };
+		ABBF9BDD1955F6D9006827C5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABBF9BDC1955F6D9006827C5 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,8 +28,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AB5FE59419538BFA007E3053 /* UserRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UserRecord.swift; path = Yolandia/UserRecord.swift; sourceTree = "<group>"; };
-		AB5FE59619538EC3007E3053 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = Yolandia/MyPlayground.playground; sourceTree = "<group>"; };
+		AB5FE59419538BFA007E3053 /* UserRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRecord.swift; sourceTree = "<group>"; };
+		AB5FE59619538EC3007E3053 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		ABBD85AC19537FFD000C4FEC /* Yolandia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yolandia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABBD85B019537FFD000C4FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABBD85B119537FFD000C4FEC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -39,7 +40,7 @@
 		ABBD85C319537FFD000C4FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABBD85C419537FFD000C4FEC /* YolandiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YolandiaTests.swift; sourceTree = "<group>"; };
 		ABBD85CE195385AD000C4FEC /* Yolandia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Yolandia.entitlements; sourceTree = "<group>"; };
-		ABBD85CF195385BE000C4FEC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		ABBF9BDC1955F6D9006827C5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABBD85D0195385BE000C4FEC /* CloudKit.framework in Frameworks */,
+				ABBF9BDD1955F6D9006827C5 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,9 +65,6 @@
 		ABBD85A319537FFD000C4FEC = {
 			isa = PBXGroup;
 			children = (
-				AB5FE59619538EC3007E3053 /* MyPlayground.playground */,
-				AB5FE59419538BFA007E3053 /* UserRecord.swift */,
-				ABBD85CF195385BE000C4FEC /* CloudKit.framework */,
 				ABBD85AE19537FFD000C4FEC /* Yolandia */,
 				ABBD85C119537FFD000C4FEC /* YolandiaTests */,
 				ABBD85AD19537FFD000C4FEC /* Products */,
@@ -85,7 +83,9 @@
 		ABBD85AE19537FFD000C4FEC /* Yolandia */ = {
 			isa = PBXGroup;
 			children = (
+				AB5FE59619538EC3007E3053 /* MyPlayground.playground */,
 				ABBD85CE195385AD000C4FEC /* Yolandia.entitlements */,
+				AB5FE59419538BFA007E3053 /* UserRecord.swift */,
 				ABBD85B119537FFD000C4FEC /* AppDelegate.swift */,
 				ABBD85B319537FFD000C4FEC /* ViewController.swift */,
 				ABBD85B519537FFD000C4FEC /* Main.storyboard */,
@@ -99,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				ABBD85B019537FFD000C4FEC /* Info.plist */,
+				ABBF9BDC1955F6D9006827C5 /* CloudKit.framework */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -236,6 +237,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABBD85C519537FFD000C4FEC /* YolandiaTests.swift in Sources */,
+				AB06785F195648B800E4C594 /* UserRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

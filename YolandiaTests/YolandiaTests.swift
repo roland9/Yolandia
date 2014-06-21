@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import CloudKit
 
 class YolandiaTests: XCTestCase {
     
@@ -20,16 +21,16 @@ class YolandiaTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
+    func testUserSaving() {
+        let expectation = self.expectationWithDescription("save a user")
+
+        var user: CKRecord
+        var error: NSError
+        User.saveUser("testUser", completionHandler: {(user, error) in
+            println("user=\(user)")
+            })
+        
+        self.waitForExpectationsWithTimeout(5, handler: nil)
     }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
+
 }
