@@ -30,9 +30,10 @@ class User {
             (savedRecord, error) in
                 if (!error) {
                     println("saved record: \(savedRecord)")
-                    
+                    completionHandler(savedRecord, error)
                 } else {
                     println("ERROR \(error.localizedDescription) saving record")
+                    completionHandler(savedRecord, error)
                 }
             }
         )
@@ -44,17 +45,20 @@ class User {
         
         let publicDatabase = CKContainer.defaultContainer().publicCloudDatabase
         
-        let predicate = NSPredicate(format: "\(userNameField) = %", userName)
+        let predicate = NSPredicate(format: "\(userNameField) = %s", userName)
         let query = CKQuery(recordType: recordType, predicate: predicate)
         
         publicDatabase.performQuery(query, inZoneWithID: nil, completionHandler: {
             
             (results, error) in
                 if (!error) {
+                    let resultsArray = results as CKRecord[]
                     println("found records: \(results)")
-                    
+                    completionHandler(resultsArray, error)
                 } else {
+                    let resultsArray = results as CKRecord[]
                     println("ERROR \(error.localizedDescription) finding record")
+                    completionHandler(resultsArray, error)
                 }
             }
         )

@@ -25,11 +25,17 @@ class YolandiaTests: XCTestCase {
         let expectation = self.expectationWithDescription("save a user")
 
         var user: CKRecord, error: NSError
-        User.saveUser("testUser", completionHandler: {(user, error) in
-            println("user=\(user)")
+         User.saveUser("testUser", completionHandler: {(user, error) in
+            println("user=\(user)  error=\(error)")
+            if (!error) {
+                XCTAssert(true)
+                expectation.fulfill()
+            } else {
+                XCTAssert(false)
+            }
             })
         
-        self.waitForExpectationsWithTimeout(2, handler: nil)
+        self.waitForExpectationsWithTimeout(5, handler: nil)
     }
 
     func testUserSearching() {
@@ -40,9 +46,15 @@ class YolandiaTests: XCTestCase {
         
         User.findUser("testUser", completionHandler: {(results, error) in
             println("results=\(results)")
+            if (!error) {
+                XCTAssert(true)
+                expectation.fulfill()
+            } else {
+                XCTAssert(false)
+            }
             })
         
-        self.waitForExpectationsWithTimeout(2, handler: nil)
+        self.waitForExpectationsWithTimeout(5, handler: nil)
     }
 
 }
