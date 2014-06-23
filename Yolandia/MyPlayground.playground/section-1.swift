@@ -5,11 +5,11 @@ import CloudKit
 
 var str = "Hello, playground"
 
-class UserRecord {
+class User {
     
     class func saveUser(userName: String) {
         println("testing \(userName)")
     }
 }
 
-UserRecord.saveUser("here is my name")
+User.saveUser("here is my name")

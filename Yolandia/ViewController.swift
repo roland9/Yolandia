@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
                             
@@ -19,8 +20,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
 
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
-        println("textfield=%s", textField)
-        var user = User.saveUser("RolandG")
+        println("textfield.text=\(textField.text)")
+        var user: CKRecord
+        var error: NSError
+        User.saveUser(textField.text, completionHandler: {(user, error) in
+            println("user=\(user)")
+            })
         return true
     }
 

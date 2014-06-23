@@ -13,7 +13,8 @@
 		ABBD85B719537FFD000C4FEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABBD85B519537FFD000C4FEC /* Main.storyboard */; };
 		ABBD85B919537FFD000C4FEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABBD85B819537FFD000C4FEC /* Images.xcassets */; };
 		ABBD85C519537FFD000C4FEC /* YolandiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD85C419537FFD000C4FEC /* YolandiaTests.swift */; };
-		ABBD85D0195385BE000C4FEC /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABBD85CF195385BE000C4FEC /* CloudKit.framework */; };
+		ABBF9BDD1955F6D9006827C5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABBF9BDC1955F6D9006827C5 /* CloudKit.framework */; };
+		ABF5E5BC1958A65500B5FE8B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FE59419538BFA007E3053 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		ABBD85C319537FFD000C4FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABBD85C419537FFD000C4FEC /* YolandiaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YolandiaTests.swift; sourceTree = "<group>"; };
 		ABBD85CE195385AD000C4FEC /* Yolandia.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Yolandia.entitlements; sourceTree = "<group>"; };
-		ABBD85CF195385BE000C4FEC /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		ABBF9BDC1955F6D9006827C5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ABBD85D0195385BE000C4FEC /* CloudKit.framework in Frameworks */,
+				ABBF9BDD1955F6D9006827C5 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,7 +66,6 @@
 			isa = PBXGroup;
 			children = (
 				AB5FE59619538EC3007E3053 /* MyPlayground.playground */,
-				ABBD85CF195385BE000C4FEC /* CloudKit.framework */,
 				ABBD85AE19537FFD000C4FEC /* Yolandia */,
 				ABBD85C119537FFD000C4FEC /* YolandiaTests */,
 				ABBD85AD19537FFD000C4FEC /* Products */,
@@ -99,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				ABBD85B019537FFD000C4FEC /* Info.plist */,
+				ABBF9BDC1955F6D9006827C5 /* CloudKit.framework */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -235,6 +236,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF5E5BC1958A65500B5FE8B /* User.swift in Sources */,
 				ABBD85C519537FFD000C4FEC /* YolandiaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +280,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -298,6 +301,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -320,6 +324,7 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -333,6 +338,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -345,11 +351,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Yolandia/Yolandia.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Yolandia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -360,11 +364,9 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Yolandia/Yolandia.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Yolandia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
