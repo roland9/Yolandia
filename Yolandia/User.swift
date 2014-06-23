@@ -1,5 +1,5 @@
 //
-//  UserRecord.swift
+//  User.swift
 //  Yolandia
 //
 //  Created by Roland on 19/06/2014.
@@ -16,7 +16,7 @@ class User {
 
         let publicDatabase = CKContainer.defaultContainer().publicCloudDatabase
         let user = CKRecord(recordType: "MyUser")
-        user.setObject("Roland", forKey:"userName")
+        user.setObject(userName, forKey:"userName")
 
         publicDatabase.saveRecord(user, completionHandler: {(savedRecord, error) in
             println("saved: \(savedRecord)  \(error)")
