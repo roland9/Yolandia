@@ -25,6 +25,20 @@
 			remoteGlobalIDString = ABBD85AB19537FFD000C4FEC;
 			remoteInfo = Yolandia;
 		};
+		AB53D8B5195A232300FF2A5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABBD85A419537FFD000C4FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABBD85AB19537FFD000C4FEC;
+			remoteInfo = Yolandia;
+		};
+		AB53D8B7195A232600FF2A5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABBD85A419537FFD000C4FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABBD85AB19537FFD000C4FEC;
+			remoteInfo = Yolandia;
+		};
 		ABBD85BF19537FFD000C4FEC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ABBD85A419537FFD000C4FEC /* Project object */;
@@ -161,6 +175,8 @@
 			dependencies = (
 				ABBD85C019537FFD000C4FEC /* PBXTargetDependency */,
 				AB53D8B4195A232300FF2A5A /* PBXTargetDependency */,
+				AB53D8B6195A232300FF2A5A /* PBXTargetDependency */,
+				AB53D8B8195A232600FF2A5A /* PBXTargetDependency */,
 			);
 			name = YolandiaTests;
 			productName = YolandiaTests;
@@ -257,6 +273,16 @@
 			isa = PBXTargetDependency;
 			target = ABBD85AB19537FFD000C4FEC /* Yolandia */;
 			targetProxy = AB53D8B3195A232300FF2A5A /* PBXContainerItemProxy */;
+		};
+		AB53D8B6195A232300FF2A5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABBD85AB19537FFD000C4FEC /* Yolandia */;
+			targetProxy = AB53D8B5195A232300FF2A5A /* PBXContainerItemProxy */;
+		};
+		AB53D8B8195A232600FF2A5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABBD85AB19537FFD000C4FEC /* Yolandia */;
+			targetProxy = AB53D8B7195A232600FF2A5A /* PBXContainerItemProxy */;
 		};
 		ABBD85C019537FFD000C4FEC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -364,9 +390,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Yolandia/Yolandia.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Yolandia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -376,9 +405,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_ENTITLEMENTS = Yolandia/Yolandia.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Yolandia/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
