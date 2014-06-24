@@ -18,6 +18,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AB53D8B3195A232300FF2A5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABBD85A419537FFD000C4FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABBD85AB19537FFD000C4FEC;
+			remoteInfo = Yolandia;
+		};
 		ABBD85BF19537FFD000C4FEC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ABBD85A419537FFD000C4FEC /* Project object */;
@@ -153,6 +160,7 @@
 			);
 			dependencies = (
 				ABBD85C019537FFD000C4FEC /* PBXTargetDependency */,
+				AB53D8B4195A232300FF2A5A /* PBXTargetDependency */,
 			);
 			name = YolandiaTests;
 			productName = YolandiaTests;
@@ -245,6 +253,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		AB53D8B4195A232300FF2A5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABBD85AB19537FFD000C4FEC /* Yolandia */;
+			targetProxy = AB53D8B3195A232300FF2A5A /* PBXContainerItemProxy */;
+		};
 		ABBD85C019537FFD000C4FEC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = ABBD85AB19537FFD000C4FEC /* Yolandia */;

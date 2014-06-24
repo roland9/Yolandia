@@ -12,7 +12,6 @@ import CloudKit
 // records in public database
 let recordTypePublic = "AllUsers"
 let userNameField = "userName"
-let signupDateField = "signupDate"
 
 // records in private database
 let recordTypeMyUsersPrivate = "MyUsers"
@@ -24,10 +23,13 @@ class User {
         assert(userName != nil, "userName mandatory")
         let publicDatabase = CKContainer.defaultContainer().publicCloudDatabase
         
-        let predicate = NSPredicate(format: "\(userNameField) = %s", userName)
+        println("trying to find userName=\(userName)")
+        
+        let predicate = NSPredicate(format: "\(userNameField) = '\(userName)'")
         let query = CKQuery(recordType: recordTypePublic, predicate: predicate)
         
         publicDatabase.performQuery(query, inZoneWithID: nil, completionHandler: { (results, error) in
+            println("found records \(results) with userName=\(userName)")
             if (!error) {
                 completionHandler(results.count>0, error)
             } else {
@@ -44,7 +46,6 @@ class User {
         
         var user = CKRecord(recordType: recordTypePublic)
         user.setObject(userName, forKey:userNameField)
-        user.setObject(NSDate(), forKey:signupDateField)
         
         publicDatabase.saveRecord(user, completionHandler: { (savedRecord, error) in
             if (!error) {
