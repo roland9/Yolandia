@@ -23,7 +23,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         println("textfield.text=\(textField.text)")
         var user: CKRecord
         var error: NSError
-        User.saveUser(textField.text, completionHandler: {(user, error) in
+        User.saveNewUser(textField.text, completionHandler: {(user, error) in
             println("user=\(user)")
             })
         return true

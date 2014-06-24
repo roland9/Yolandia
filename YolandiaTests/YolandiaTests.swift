@@ -23,10 +23,10 @@ class YolandiaTests: XCTestCase {
     
     func testUserSaving() {
         let expectation = self.expectationWithDescription("save a user")
-
+        let userName = "testUserExisting"
+        
         var user: CKRecord, error: NSError
-         User.saveUser("testUser", completionHandler: {(user, error) in
-            println("user=\(user)  error=\(error)")
+         User.saveNewUser(userName, completionHandler: { (user, error) in
             if (!error) {
                 XCTAssert(true)
                 expectation.fulfill()
@@ -38,16 +38,15 @@ class YolandiaTests: XCTestCase {
         self.waitForExpectationsWithTimeout(5, handler: nil)
     }
 
-    func testUserSearching() {
-        let expectation = self.expectationWithDescription("find a user")
-        let userName = "testUser"
+    func testUserSearchingNonExistent() {
+        let expectation = self.expectationWithDescription("check for non-existent user")
+        let userName = "testUserNonExisting"
         
         var results: CKRecord[], error: NSError
         
-        User.findUser("testUser", completionHandler: {(results, error) in
-            println("results=\(results)")
+        User.checkIfUserExists(userName, completionHandler: { (doesUserExist, error) in
             if (!error) {
-                XCTAssert(true)
+                XCTAssert(!doesUserExist)
                 expectation.fulfill()
             } else {
                 XCTAssert(false)
@@ -57,4 +56,22 @@ class YolandiaTests: XCTestCase {
         self.waitForExpectationsWithTimeout(5, handler: nil)
     }
 
+    func testUserSearchingExistent() {
+        let expectation = self.expectationWithDescription("check for existing user")
+        let userName = "testUserExisting"
+        
+        var results: CKRecord[], error: NSError
+        
+        User.checkIfUserExists(userName, completionHandler: { (doesUserExist, error) in
+            if (!error) {
+                XCTAssert(doesUserExist)
+                expectation.fulfill()
+            } else {
+                XCTAssert(false)
+            }
+            })
+        
+        self.waitForExpectationsWithTimeout(5, handler: nil)
+    }
+    
 }
