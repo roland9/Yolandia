@@ -38,6 +38,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate
                     
                     if (savedRecord) {
                         self.showAlert("Saved Your User Name", message: "Congrats - you claimed your user name")
+
+                        let usersTableViewController = UsersTableViewController(style: UITableViewStyle.Grouped)
+                        self.presentViewController(usersTableViewController, animated: true, completion: nil)
                         
                     } else {
                         self.showAlert("Somthing Went Wrong...", message: "Oops - could not claim that user name.\nPlease try again later")

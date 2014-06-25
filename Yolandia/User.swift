@@ -111,7 +111,8 @@ class User {
     }
     
     class func localSaveNewUser(userName: String, completionHandler: ((CKRecord!, NSError!) -> Void)!) {
-        completionHandler( nil, nil )
+        let userRecord = CKRecord(recordType: recordTypePublic)
+        completionHandler( userRecord, nil )
     }
     
     class func localGetMyUsers(completionHandler:((String[]!, NSError!) -> Void)!) {

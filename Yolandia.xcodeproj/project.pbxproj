@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB38A49A195B7A9400A44972 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38A499195B7A9400A44972 /* UserDataManager.swift */; };
+		AB38A49C195B7ABC00A44972 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38A49B195B7ABC00A44972 /* UsersTableViewController.swift */; };
 		AB5FE59519538BFA007E3053 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FE59419538BFA007E3053 /* User.swift */; };
 		ABBD85B219537FFD000C4FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD85B119537FFD000C4FEC /* AppDelegate.swift */; };
 		ABBD85B419537FFD000C4FEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD85B319537FFD000C4FEC /* ViewController.swift */; };
@@ -49,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB38A499195B7A9400A44972 /* UserDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
+		AB38A49B195B7ABC00A44972 /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
 		AB5FE59419538BFA007E3053 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AB5FE59619538EC3007E3053 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		ABBD85AC19537FFD000C4FEC /* Yolandia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yolandia.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +110,8 @@
 			children = (
 				AB5FE59619538EC3007E3053 /* MyPlayground.playground */,
 				ABBD85CE195385AD000C4FEC /* Yolandia.entitlements */,
+				AB38A499195B7A9400A44972 /* UserDataManager.swift */,
+				AB38A49B195B7ABC00A44972 /* UsersTableViewController.swift */,
 				ABBD85B119537FFD000C4FEC /* AppDelegate.swift */,
 				AB5FE59419538BFA007E3053 /* User.swift */,
 				ABBD85B319537FFD000C4FEC /* ViewController.swift */,
@@ -253,6 +259,8 @@
 			files = (
 				ABBD85B419537FFD000C4FEC /* ViewController.swift in Sources */,
 				AB5FE59519538BFA007E3053 /* User.swift in Sources */,
+				AB38A49A195B7A9400A44972 /* UserDataManager.swift in Sources */,
+				AB38A49C195B7ABC00A44972 /* UsersTableViewController.swift in Sources */,
 				ABBD85B219537FFD000C4FEC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
