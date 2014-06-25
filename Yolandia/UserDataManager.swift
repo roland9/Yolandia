@@ -8,9 +8,20 @@
 
 import Foundation
 
-class UserDataManager: NSObject {
+class UserDataManager {
     
-    class func users() -> String[] {
-        return [ "user 1", "user 2", "user 3" ]
+    var usersArray = [ "test1", "test2", "test3", "test4" ]
+    
+    init() {
+        //        usersArray = [ "test1", "test2", "test3", "test4" ]
+        
+        User.getMyUsers( { (userNames, error) in
+            self.usersArray = userNames as String[]
+            })
+    }
+    
+    
+    func users() -> String[] {
+        return usersArray
     }
 }

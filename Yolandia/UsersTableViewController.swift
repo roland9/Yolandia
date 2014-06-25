@@ -11,6 +11,7 @@ import UIKit
 class UsersTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
     let cellIdentifier = "UserCell"
+    var userDataManager = UserDataManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,14 +19,14 @@ class UsersTableViewController: UITableViewController, UITableViewDataSource, UI
     }
     
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        return UserDataManager.users().count
+        return self.userDataManager.users().count
     }
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         let cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as UITableViewCell
         assert(cell != nil, "expected cell object")
         
-        let userName = UserDataManager.users()[indexPath.row] as String
+        let userName = self.userDataManager.users()[indexPath.row] as String
         cell.textLabel.text = userName
         
         return cell
