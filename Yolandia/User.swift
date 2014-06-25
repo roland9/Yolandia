@@ -86,6 +86,10 @@ class User {
         privateDatabase.performQuery(query, inZoneWithID: nil, completionHandler: { (results, error) in
             if (!error) {
                 let resultsArray = results as CKRecord[]
+                let userNamesArray = resultsArray.map( {
+                    (userRecord: CKRecord) -> String in
+                    return userRecord.objectForKey(userNameField) as String
+                    })
                 println("found records: \(results)")
                 completionHandler(nil, error)
             } else {
