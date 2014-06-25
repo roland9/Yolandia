@@ -74,4 +74,21 @@ class YolandiaTests: XCTestCase {
         self.waitForExpectationsWithTimeout(5, handler: nil)
     }
     
+    func testGetMyUsers() {
+        let expectation = self.expectationWithDescription("get user list")
+        
+        User.getMyUsers( { (userNames, error) in
+            if (!error) {
+                if (userNames == [ "Roland", "Batman", "DummyUser" ]) {
+                    XCTAssert(true)
+                    expectation.fulfill()
+                } else {
+                    XCTAssert(false)
+                }
+            } else {
+                XCTAssert(false)
+            }
+            })
+        self.waitForExpectationsWithTimeout(5, handler: nil)
+    }
 }

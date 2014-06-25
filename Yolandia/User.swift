@@ -9,6 +9,9 @@
 import Foundation
 import CloudKit
 
+// switch between local mockups & CloudKit calls
+let isLocalMockupActive = true
+
 // records in public database
 let recordTypePublic = "AllUsers"
 let userNameField = "userName"
@@ -21,9 +24,13 @@ class User {
     // public
     class func checkIfUserExists(userName: String, completionHandler: ((Bool!, NSError!) -> Void)!) {
         assert(userName != nil, "userName mandatory")
-        let publicDatabase = CKContainer.defaultContainer().publicCloudDatabase
         
-        println("trying to find userName=\(userName)")
+        if (isLocalMockupActive) {
+            self.localCheckIfUserExists(userName, completionHandler)
+            return
+        }
+        
+        let publicDatabase = CKContainer.defaultContainer().publicCloudDatabase
         
         let predicate = NSPredicate(format: "\(userNameField) = '\(userName)'")
         let query = CKQuery(recordType: recordTypePublic, predicate: predicate)
@@ -42,6 +49,12 @@ class User {
 
     class func saveNewUser(userName: String, completionHandler: ((CKRecord!, NSError!) -> Void)!) {
         assert(userName != nil, "userName mandatory")
+        
+        if (isLocalMockupActive) {
+            self.localSaveNewUser(userName, completionHandler)
+            return
+        }
+        
         let publicDatabase = CKContainer.defaultContainer().publicCloudDatabase
         
         var user = CKRecord(recordType: recordTypePublic)
@@ -59,7 +72,12 @@ class User {
         )
     }
    
-    class func getMyUsers(completionHandler:((CKRecord[]!, NSError!) -> Void)!) {
+    class func getMyUsers(completionHandler:((String[]!, NSError!) -> Void)!) {
+        if (isLocalMockupActive) {
+            self.localGetMyUsers(completionHandler)
+            return
+        }
+        
         let privateDatabase = CKContainer.defaultContainer().privateCloudDatabase
         
         let predicate = NSPredicate(value: true)
@@ -69,7 +87,7 @@ class User {
             if (!error) {
                 let resultsArray = results as CKRecord[]
                 println("found records: \(results)")
-                completionHandler(resultsArray, error)
+                completionHandler(nil, error)
             } else {
                 println("ERROR \(error.localizedDescription) finding record")
                 completionHandler(nil, error)
@@ -80,4 +98,20 @@ class User {
     
     
     // private
+    class func localCheckIfUserExists(userName: String, completionHandler: ((Bool!, NSError!) -> Void)!) {
+        if (userName.hasPrefix("t")) {
+            completionHandler( true, nil )
+        } else {
+            completionHandler( false, nil)
+        }
+    }
+    
+    class func localSaveNewUser(userName: String, completionHandler: ((CKRecord!, NSError!) -> Void)!) {
+        completionHandler( nil, nil )
+    }
+    
+    class func localGetMyUsers(completionHandler:((String[]!, NSError!) -> Void)!) {
+        let userNames = [ "Roland", "Batman", "DummyUser" ]
+        completionHandler(userNames, nil)
+    }
 }
