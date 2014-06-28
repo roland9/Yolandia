@@ -21,16 +21,74 @@ class YolandiaTests: XCTestCase {
         super.tearDown()
     }
     
-    func testUserSaving() {
-        let expectation = self.expectationWithDescription("save a user")
-
-        var user: CKRecord
-        var error: NSError
-        User.saveUser("testUser", completionHandler: {(user, error) in
-            println("user=\(user)")
+    func testUserSearchingNonExistent() {
+        let expectation = self.expectationWithDescription("check for non-existent user")
+        let userName = "testUserNonExisting"
+        
+        var results: CKRecord[], error: NSError
+        
+        User.checkIfUserExists(userName, completionHandler: { (doesUserExist, error) in
+            if (!error) {
+                XCTAssert(!doesUserExist)
+                expectation.fulfill()
+            } else {
+                XCTAssert(false)
+            }
             })
         
         self.waitForExpectationsWithTimeout(5, handler: nil)
     }
-
+    
+    func testUserSearchingExistent() {
+        let expectation = self.expectationWithDescription("check for existing user")
+        let userName = "testUserExisting"
+        
+        var results: CKRecord[], error: NSError
+        
+        User.checkIfUserExists(userName, completionHandler: { (doesUserExist, error) in
+            if (!error) {
+                XCTAssert(doesUserExist)
+                expectation.fulfill()
+            } else {
+                XCTAssert(false)
+            }
+            })
+        
+        self.waitForExpectationsWithTimeout(5, handler: nil)
+    }
+    
+    func testUserSaving() {
+        let expectation = self.expectationWithDescription("save a user")
+        let userName = "testUserExisting"
+        
+        var user: CKRecord, error: NSError
+        User.saveNewUser(userName, completionHandler: { (user, error) in
+            if (!error) {
+                XCTAssert(true)
+                expectation.fulfill()
+            } else {
+                XCTAssert(false)
+            }
+            })
+        
+        self.waitForExpectationsWithTimeout(5, handler: nil)
+    }
+    
+    func testGetMyUsers() {
+        let expectation = self.expectationWithDescription("get user list")
+        
+        User.getMyUsers( { (userNames, error) in
+            if (!error) {
+                if (userNames == [ "Roland", "Batman", "DummyUser" ]) {
+                    XCTAssert(true)
+                    expectation.fulfill()
+                } else {
+                    XCTAssert(false)
+                }
+            } else {
+                XCTAssert(false)
+            }
+            })
+        self.waitForExpectationsWithTimeout(5, handler: nil)
+    }
 }

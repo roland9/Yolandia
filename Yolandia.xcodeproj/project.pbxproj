@@ -7,17 +7,40 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AB06785F195648B800E4C594 /* UserRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FE59419538BFA007E3053 /* UserRecord.swift */; };
-		AB5FE59519538BFA007E3053 /* UserRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FE59419538BFA007E3053 /* UserRecord.swift */; };
+		AB38A49A195B7A9400A44972 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38A499195B7A9400A44972 /* UserDataManager.swift */; };
+		AB38A49C195B7ABC00A44972 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38A49B195B7ABC00A44972 /* UsersTableViewController.swift */; };
+		AB5FE59519538BFA007E3053 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FE59419538BFA007E3053 /* User.swift */; };
 		ABBD85B219537FFD000C4FEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD85B119537FFD000C4FEC /* AppDelegate.swift */; };
 		ABBD85B419537FFD000C4FEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD85B319537FFD000C4FEC /* ViewController.swift */; };
 		ABBD85B719537FFD000C4FEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ABBD85B519537FFD000C4FEC /* Main.storyboard */; };
 		ABBD85B919537FFD000C4FEC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ABBD85B819537FFD000C4FEC /* Images.xcassets */; };
 		ABBD85C519537FFD000C4FEC /* YolandiaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABBD85C419537FFD000C4FEC /* YolandiaTests.swift */; };
 		ABBF9BDD1955F6D9006827C5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABBF9BDC1955F6D9006827C5 /* CloudKit.framework */; };
+		ABF5E5BC1958A65500B5FE8B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5FE59419538BFA007E3053 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		AB53D8B3195A232300FF2A5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABBD85A419537FFD000C4FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABBD85AB19537FFD000C4FEC;
+			remoteInfo = Yolandia;
+		};
+		AB53D8B5195A232300FF2A5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABBD85A419537FFD000C4FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABBD85AB19537FFD000C4FEC;
+			remoteInfo = Yolandia;
+		};
+		AB53D8B7195A232600FF2A5A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ABBD85A419537FFD000C4FEC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ABBD85AB19537FFD000C4FEC;
+			remoteInfo = Yolandia;
+		};
 		ABBD85BF19537FFD000C4FEC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ABBD85A419537FFD000C4FEC /* Project object */;
@@ -28,7 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		AB5FE59419538BFA007E3053 /* UserRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRecord.swift; sourceTree = "<group>"; };
+		AB38A499195B7A9400A44972 /* UserDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
+		AB38A49B195B7ABC00A44972 /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
+		AB5FE59419538BFA007E3053 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		AB5FE59619538EC3007E3053 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		ABBD85AC19537FFD000C4FEC /* Yolandia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yolandia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABBD85B019537FFD000C4FEC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,8 +110,10 @@
 			children = (
 				AB5FE59619538EC3007E3053 /* MyPlayground.playground */,
 				ABBD85CE195385AD000C4FEC /* Yolandia.entitlements */,
-				AB5FE59419538BFA007E3053 /* UserRecord.swift */,
+				AB38A499195B7A9400A44972 /* UserDataManager.swift */,
+				AB38A49B195B7ABC00A44972 /* UsersTableViewController.swift */,
 				ABBD85B119537FFD000C4FEC /* AppDelegate.swift */,
+				AB5FE59419538BFA007E3053 /* User.swift */,
 				ABBD85B319537FFD000C4FEC /* ViewController.swift */,
 				ABBD85B519537FFD000C4FEC /* Main.storyboard */,
 				ABBD85B819537FFD000C4FEC /* Images.xcassets */,
@@ -153,6 +180,9 @@
 			);
 			dependencies = (
 				ABBD85C019537FFD000C4FEC /* PBXTargetDependency */,
+				AB53D8B4195A232300FF2A5A /* PBXTargetDependency */,
+				AB53D8B6195A232300FF2A5A /* PBXTargetDependency */,
+				AB53D8B8195A232600FF2A5A /* PBXTargetDependency */,
 			);
 			name = YolandiaTests;
 			productName = YolandiaTests;
@@ -179,6 +209,7 @@
 					};
 					ABBD85BD19537FFD000C4FEC = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 2H43Y8J8SC;
 						TestTargetID = ABBD85AB19537FFD000C4FEC;
 					};
 				};
@@ -227,7 +258,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABBD85B419537FFD000C4FEC /* ViewController.swift in Sources */,
-				AB5FE59519538BFA007E3053 /* UserRecord.swift in Sources */,
+				AB5FE59519538BFA007E3053 /* User.swift in Sources */,
+				AB38A49A195B7A9400A44972 /* UserDataManager.swift in Sources */,
+				AB38A49C195B7ABC00A44972 /* UsersTableViewController.swift in Sources */,
 				ABBD85B219537FFD000C4FEC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,14 +269,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF5E5BC1958A65500B5FE8B /* User.swift in Sources */,
 				ABBD85C519537FFD000C4FEC /* YolandiaTests.swift in Sources */,
-				AB06785F195648B800E4C594 /* UserRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		AB53D8B4195A232300FF2A5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABBD85AB19537FFD000C4FEC /* Yolandia */;
+			targetProxy = AB53D8B3195A232300FF2A5A /* PBXContainerItemProxy */;
+		};
+		AB53D8B6195A232300FF2A5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABBD85AB19537FFD000C4FEC /* Yolandia */;
+			targetProxy = AB53D8B5195A232300FF2A5A /* PBXContainerItemProxy */;
+		};
+		AB53D8B8195A232600FF2A5A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ABBD85AB19537FFD000C4FEC /* Yolandia */;
+			targetProxy = AB53D8B7195A232600FF2A5A /* PBXContainerItemProxy */;
+		};
 		ABBD85C019537FFD000C4FEC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = ABBD85AB19537FFD000C4FEC /* Yolandia */;
@@ -280,7 +328,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Roland Gropmair (653QWY22PD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Roland Gropmair (653QWY22PD)";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -300,6 +349,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -322,7 +372,8 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Roland Gropmair (653QWY22PD)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Roland Gropmair (653QWY22PD)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -335,6 +386,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
