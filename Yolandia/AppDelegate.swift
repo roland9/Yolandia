@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -42,5 +43,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+    func application(application: UIApplication!, didReceiveRemoteNotification userInfo: NSDictionary!) {
+        // Tells the delegate that the running app received a remote notification.
+        
+        println("received push")
+        
+        let cloudKitNotification = CKNotification(fromRemoteNotificationDictionary: userInfo)
+        let alertBody = cloudKitNotification.alertBody
+        if (cloudKitNotification.notificationType == CKNotificationType.Query) {
+            let queryNotification = cloudKitNotification as CKQueryNotification
+            let recordId = queryNotification.recordID
+            println("recordId=\(recordId)")
+        }
+    }
 }
 

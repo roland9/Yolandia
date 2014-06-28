@@ -13,7 +13,7 @@ class UserDataManager {
     var usersArray = [ "test1", "test2", "test3", "test4" ]
     
     init() {
-// todoRG called twice!
+// todoRG called twice?!?
         User.getMyUsers( { (userNames, error) in
             self.usersArray = userNames as String[]
             NSNotificationCenter.defaultCenter().postNotificationName(kDidReceiveDataNotification, object: nil)
