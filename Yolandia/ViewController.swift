@@ -37,7 +37,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate
                 User.saveNewUser(userName, completionHandler: { (savedRecord, error) in
                     
                     if (savedRecord) {
-                        self.showAlert("Saved Your User Name", message: "Congrats - you claimed your user name")
+//                        self.showAlert("Saved Your User Name", message: "Congrats - you claimed your user name")
 
                         let usersTableViewController = UsersTableViewController(style: UITableViewStyle.Grouped)
                         self.presentViewController(usersTableViewController, animated: true, completion: nil)

@@ -8,15 +8,29 @@
 
 import UIKit
 
+let kDidReceiveDataNotification = "kDidReceiveDataNotification"
+
 class UsersTableViewController: UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
     let cellIdentifier = "UserCell"
     var userDataManager = UserDataManager()
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didReceiveData:" as Selector, name: kDidReceiveDataNotification, object: nil)
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        NSNotificationCenter.defaultCenter().removeObserver(self, name: kDidReceiveDataNotification, object: nil)
+    }
+    
+    // UITableView
     
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
         return self.userDataManager.users().count
@@ -30,6 +44,12 @@ class UsersTableViewController: UITableViewController, UITableViewDataSource, UI
         cell.textLabel.text = userName
         
         return cell
+    }
+    
+    // private - data handling
+    
+    func didReceiveData(notification: NSNotification) {
+        self.tableView.reloadData()
     }
 
 }

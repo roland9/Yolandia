@@ -13,13 +13,18 @@ class UserDataManager {
     var usersArray = [ "test1", "test2", "test3", "test4" ]
     
     init() {
-        //        usersArray = [ "test1", "test2", "test3", "test4" ]
-        
+// todoRG called twice!
         User.getMyUsers( { (userNames, error) in
             self.usersArray = userNames as String[]
+            NSNotificationCenter.defaultCenter().postNotificationName(kDidReceiveDataNotification, object: nil)
             })
+        
+//        let delay = 4.5 * Double(NSEC_PER_SEC)
+//        let time = dispatch_time(DISPATCH_TIME_NOW, Int64(delay))
+//        dispatch_after(time, dispatch_get_main_queue(), {
+//            NSNotificationCenter.defaultCenter().postNotificationName(kDidReceiveDataNotification, object: nil)
+//            })
     }
-    
     
     func users() -> String[] {
         return usersArray
