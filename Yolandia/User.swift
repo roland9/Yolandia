@@ -10,7 +10,7 @@ import Foundation
 import CloudKit
 
 // switch between local mockups & CloudKit calls
-let isLocalMockupActive = true
+let isLocalMockupActive = false
 
 // records in public database
 let recordTypePublic = "AllUsers"
@@ -72,7 +72,7 @@ class User {
         )
     }
    
-    class func getMyUsers(completionHandler:((String[]!, NSError!) -> Void)!) {
+    class func getMyUsers(completionHandler:(([String]!, NSError!) -> Void)!) {
         if (isLocalMockupActive) {
             self.localGetMyUsers(completionHandler)
             return
@@ -85,7 +85,7 @@ class User {
         
         privateDatabase.performQuery(query, inZoneWithID: nil, completionHandler: { (results, error) in
             if (!error) {
-                let resultsArray = results as CKRecord[]
+                let resultsArray = results as [CKRecord]
                 let userNamesArray = resultsArray.map( {
                     (userRecord: CKRecord) -> String in
                     return userRecord.objectForKey(userNameField) as String
@@ -115,7 +115,7 @@ class User {
         completionHandler( userRecord, nil )
     }
     
-    class func localGetMyUsers(completionHandler:((String[]!, NSError!) -> Void)!) {
+    class func localGetMyUsers(completionHandler:(([String]!, NSError!) -> Void)!) {
         let userNames = [ "Roland", "Batman", "DummyUser" ]
         completionHandler(userNames, nil)
     }

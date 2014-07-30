@@ -10,13 +10,15 @@ import Foundation
 
 class UserDataManager {
     
-    var usersArray = [ "test1", "test2", "test3", "test4" ]
+    var usersArray:[String] = []
     
     init() {
 // todoRG called twice?!?
         User.getMyUsers( { (userNames, error) in
-            self.usersArray = userNames as String[]
-            NSNotificationCenter.defaultCenter().postNotificationName(kDidReceiveDataNotification, object: nil)
+            if (!error) {
+                self.usersArray = userNames as [String]
+                NSNotificationCenter.defaultCenter().postNotificationName(kDidReceiveDataNotification, object: nil)
+            }
             })
         
 //        let delay = 4.5 * Double(NSEC_PER_SEC)
@@ -26,7 +28,7 @@ class UserDataManager {
 //            })
     }
     
-    func users() -> String[] {
-        return usersArray
+    func users() -> [String] {
+        return self.usersArray
     }
 }

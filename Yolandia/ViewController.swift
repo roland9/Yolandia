@@ -11,7 +11,7 @@ import CloudKit
 
 class ViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate {
     
-    @IBOutlet var userNameTextField: UITextField
+    @IBOutlet var userNameTextField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +40,9 @@ class ViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate
 //                        self.showAlert("Saved Your User Name", message: "Congrats - you claimed your user name")
 
                         let usersTableViewController = UsersTableViewController(style: UITableViewStyle.Grouped)
-                        self.presentViewController(usersTableViewController, animated: true, completion: nil)
+                        NSOperationQueue.mainQueue().addOperationWithBlock {
+                            self.presentViewController(usersTableViewController, animated: true, completion: nil)
+                        }
                         
                     } else {
                         self.showAlert("Somthing Went Wrong...", message: "Oops - could not claim that user name.\nPlease try again later")
