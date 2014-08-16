@@ -16,7 +16,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         self.userNameTextField.delegate = self
-        
     }
     
     func textFieldShouldReturn(textField: UITextField!) -> Bool {
@@ -54,6 +53,15 @@ class ViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate
             })
         
         return true
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let usersTVC = UsersTableViewController(style: UITableViewStyle.Plain)
+        
+        self .presentViewController(usersTVC, animated: true) { () -> Void in
+            //
+        }
     }
     
     

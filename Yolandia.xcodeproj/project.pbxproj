@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		231393D5199FAFB90024B72D /* AddContactFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231393D4199FAFB90024B72D /* AddContactFooterView.swift */; };
+		231393D6199FAFB90024B72D /* AddContactFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 231393D4199FAFB90024B72D /* AddContactFooterView.swift */; };
 		AB1360B0195F7F7300E7E5D5 /* SubscriptionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1360AF195F7F7300E7E5D5 /* SubscriptionManager.swift */; };
 		AB38A49A195B7A9400A44972 /* UserDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38A499195B7A9400A44972 /* UserDataManager.swift */; };
 		AB38A49C195B7ABC00A44972 /* UsersTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB38A49B195B7ABC00A44972 /* UsersTableViewController.swift */; };
@@ -52,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		231393D4199FAFB90024B72D /* AddContactFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddContactFooterView.swift; sourceTree = "<group>"; };
 		AB1360AF195F7F7300E7E5D5 /* SubscriptionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscriptionManager.swift; sourceTree = "<group>"; };
 		AB38A499195B7A9400A44972 /* UserDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDataManager.swift; sourceTree = "<group>"; };
 		AB38A49B195B7ABC00A44972 /* UsersTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UsersTableViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +117,7 @@
 				ABBD85CE195385AD000C4FEC /* Yolandia.entitlements */,
 				AB38A499195B7A9400A44972 /* UserDataManager.swift */,
 				AB38A49B195B7ABC00A44972 /* UsersTableViewController.swift */,
+				231393D4199FAFB90024B72D /* AddContactFooterView.swift */,
 				ABBD85B119537FFD000C4FEC /* AppDelegate.swift */,
 				AB5FE59419538BFA007E3053 /* User.swift */,
 				AB1360AF195F7F7300E7E5D5 /* SubscriptionManager.swift */,
@@ -266,6 +270,7 @@
 				AB38A49A195B7A9400A44972 /* UserDataManager.swift in Sources */,
 				AB38A49C195B7ABC00A44972 /* UsersTableViewController.swift in Sources */,
 				ABBD85B219537FFD000C4FEC /* AppDelegate.swift in Sources */,
+				231393D5199FAFB90024B72D /* AddContactFooterView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABF5E5BC1958A65500B5FE8B /* User.swift in Sources */,
+				231393D6199FAFB90024B72D /* AddContactFooterView.swift in Sources */,
 				ABBD85C519537FFD000C4FEC /* YolandiaTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
