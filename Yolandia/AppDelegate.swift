@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
-        // Override point for customization after application launch.
+
+        LocalyticsSession.shared().integrateLocalytics("47202c97b8d92b3d4694d1d-88b45ec6-258a-11e4-4a78-00a426b17dd8", launchOptions: launchOptions)
         return true
     }
 

@@ -17,12 +17,23 @@ class AddContactFooterView: UITableViewHeaderFooterView {
         button.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
         button.setTitle("+", forState: UIControlState.Normal)
         button.backgroundColor = UIColor.greenColor()
+        button.layer.cornerRadius = 22
         return button
     }()
 	
-    lazy var userInput: UITextField = {
+    lazy var inputTextField: UITextField = {
         let input = UITextField()
-return input
+        input.setTranslatesAutoresizingMaskIntoConstraints(false)
+        input.backgroundColor = UIColor.yellowColor()
+        return input
+    }()
+
+    lazy var backgroundRoundedView: UIView = {
+        let view = UIView()
+        view.setTranslatesAutoresizingMaskIntoConstraints(false)
+        view.backgroundColor = UIColor.brownColor()
+        view.layer.cornerRadius = 5
+        return view
     }()
 
 // why is this required?!?
@@ -33,10 +44,14 @@ return input
 	override init(reuseIdentifier: String!) {
         super.init(reuseIdentifier: reuseIdentifier)
 
+        self.addSubview(backgroundRoundedView)
+        self.addSubview(inputTextField)
         self.addSubview(addButton)
-        
+
         let views = [
             "addButton": addButton,
+            "inputTextField": inputTextField,
+            "backgroundView": backgroundRoundedView
         ]
 
         let metrics = [
@@ -45,17 +60,26 @@ return input
             "lineMargin": 14
         ]
 
-        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("|-[addButton(>=200)]-|", options: nil, metrics: metrics, views: views))
-        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-(margin)-[addButton]-(margin)-|", options: nil, metrics: metrics, views: views))
-//        contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[lineView]|", options: nil, metrics: metrics, views: views))
-//        contentView.addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .CenterY, relatedBy: .Equal, toItem: timeLabel, attribute: .CenterY, multiplier: 1, constant: 0))
-//        contentView.addConstraint(NSLayoutConstraint(item: circleView, attribute: .CenterX, relatedBy: .Equal, toItem: lineView, attribute: .CenterX, multiplier: 1, constant: 0))
-//        contentView.addConstraint(NSLayoutConstraint(item: circleView, attribute: .CenterY, relatedBy: .Equal, toItem: titleLabel, attribute: .CenterY, multiplier: 1, constant: 0))
-//        contentView.addConstraint(NSLayoutConstraint(item: circleView, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 14))
-//        contentView.addConstraint(NSLayoutConstraint(item: circleView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 14))
+// backgroundRoundedView
+        self.addConstraint(NSLayoutConstraint(item: backgroundRoundedView, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 300))
+        self.addConstraint(NSLayoutConstraint(item: backgroundRoundedView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 50))
+        self.addConstraint(NSLayoutConstraint(item: backgroundRoundedView, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: backgroundRoundedView, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0))
+
+// addButton
+        self.addConstraint(NSLayoutConstraint(item: addButton, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 44))
+        self.addConstraint(NSLayoutConstraint(item: addButton, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 44))
+        self.addConstraint(NSLayoutConstraint(item: addButton, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0))
+        self.addConstraint(NSLayoutConstraint(item: addButton, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0))
+
+// inputTextField
+        self.addConstraint(NSLayoutConstraint(item: inputTextField, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 2))
+        self.addConstraint(NSLayoutConstraint(item: inputTextField, attribute: .Height, relatedBy: .Equal, toItem: addButton, attribute: .Height, multiplier: 1, constant: -10))
+        self.addConstraint(NSLayoutConstraint(item: inputTextField, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: -60))
+        self.addConstraint(NSLayoutConstraint(item: inputTextField, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0))
     }
     
- required init(coder aDecoder: NSCoder) {
+     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
     

@@ -66,7 +66,7 @@ return 1
     }
 
 	override func tableView(tableView: UITableView!, heightForFooterInSection section: Int) -> CGFloat {
-		return 45
+		return 50
 	}
 
     

@@ -1,0 +1,10 @@
+PODS:
+  - Localytics-AMP (2.60.0)
+
+DEPENDENCIES:
+  - Localytics-AMP (~> 2.0)
+
+SPEC CHECKSUMS:
+  Localytics-AMP: 3d1cfef8a267ed28756798830044ec35b41e99f4
+
+COCOAPODS: 0.33.1
