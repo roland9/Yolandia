@@ -18,6 +18,7 @@ class AddContactFooterView: UITableViewHeaderFooterView {
         button.setTitle("+", forState: UIControlState.Normal)
         button.backgroundColor = UIColor.greenColor()
         button.layer.cornerRadius = 22
+        button.addTarget(self, action: "didSelectAdd:", forControlEvents: UIControlEvents.TouchUpInside)
         return button
     }()
 	
@@ -35,6 +36,9 @@ class AddContactFooterView: UITableViewHeaderFooterView {
         view.layer.cornerRadius = 5
         return view
     }()
+
+var backgroundRoundedWidthConstraint = NSLayoutConstraint()
+var inputTextFieldWidthConstraint = NSLayoutConstraint()
 
 // why is this required?!?
     override init(frame: CGRect) {
@@ -61,7 +65,8 @@ class AddContactFooterView: UITableViewHeaderFooterView {
         ]
 
 // backgroundRoundedView
-        self.addConstraint(NSLayoutConstraint(item: backgroundRoundedView, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 300))
+        backgroundRoundedWidthConstraint = NSLayoutConstraint(item: backgroundRoundedView, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 0)
+        self.addConstraint(backgroundRoundedWidthConstraint)
         self.addConstraint(NSLayoutConstraint(item: backgroundRoundedView, attribute: .Height, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 50))
         self.addConstraint(NSLayoutConstraint(item: backgroundRoundedView, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: 0))
         self.addConstraint(NSLayoutConstraint(item: backgroundRoundedView, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0))
@@ -73,7 +78,8 @@ class AddContactFooterView: UITableViewHeaderFooterView {
         self.addConstraint(NSLayoutConstraint(item: addButton, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0))
 
 // inputTextField
-        self.addConstraint(NSLayoutConstraint(item: inputTextField, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 2))
+        inputTextFieldWidthConstraint = NSLayoutConstraint(item: inputTextField, attribute: .Width, relatedBy: .Equal, toItem: nil, attribute: .NotAnAttribute, multiplier: 1, constant: 0)
+        self.addConstraint(inputTextFieldWidthConstraint)
         self.addConstraint(NSLayoutConstraint(item: inputTextField, attribute: .Height, relatedBy: .Equal, toItem: addButton, attribute: .Height, multiplier: 1, constant: -10))
         self.addConstraint(NSLayoutConstraint(item: inputTextField, attribute: .CenterX, relatedBy: .Equal, toItem: self, attribute: .CenterX, multiplier: 1, constant: -60))
         self.addConstraint(NSLayoutConstraint(item: inputTextField, attribute: .CenterY, relatedBy: .Equal, toItem: self, attribute: .CenterY, multiplier: 1, constant: 0))
@@ -83,4 +89,13 @@ class AddContactFooterView: UITableViewHeaderFooterView {
         super.init(coder: aDecoder)
     }
     
+// user actions
+    func didSelectAdd(sender: UIButton) {
+        UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.BeginFromCurrentState, animations: {() in
+                self.backgroundRoundedWidthConstraint.constant = 300
+                self.inputTextFieldWidthConstraint.constant = 200
+        self.layoutIfNeeded()
+        }, completion:nil)
+
+    }
 }
