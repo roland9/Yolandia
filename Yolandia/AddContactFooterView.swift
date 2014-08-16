@@ -13,10 +13,18 @@ class AddContactFooterView: UITableViewHeaderFooterView {
     lazy var addButton: UIButton = {
         let button = UIButton()
         button.setTranslatesAutoresizingMaskIntoConstraints(false)
-        button.titleLabel.font = UIFont(name: "Avenir", size: 16)
+        button.titleLabel.font = UIFont(name: "Avenir", size: 32)
+        button.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
+        button.setTitle("+", forState: UIControlState.Normal)
+        button.backgroundColor = UIColor.greenColor()
         return button
     }()
 	
+    lazy var userInput: UITextField = {
+        let input = UITextField()
+return input
+    }()
+
 // why is this required?!?
     override init(frame: CGRect) {
 		super.init(frame: frame)
@@ -37,7 +45,7 @@ class AddContactFooterView: UITableViewHeaderFooterView {
             "lineMargin": 14
         ]
 
-        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("|-[addButton(80)]-|", options: nil, metrics: metrics, views: views))
+        self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("|-[addButton(>=200)]-|", options: nil, metrics: metrics, views: views))
         self.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|-(margin)-[addButton]-(margin)-|", options: nil, metrics: metrics, views: views))
 //        contentView.addConstraints(NSLayoutConstraint.constraintsWithVisualFormat("V:|[lineView]|", options: nil, metrics: metrics, views: views))
 //        contentView.addConstraint(NSLayoutConstraint(item: titleLabel, attribute: .CenterY, relatedBy: .Equal, toItem: timeLabel, attribute: .CenterY, multiplier: 1, constant: 0))
@@ -50,9 +58,5 @@ class AddContactFooterView: UITableViewHeaderFooterView {
  required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
-
-//   override func intrinsicContentSize() -> CGSize {
-//        return CGSizeMake(320, 140)
-//    }
     
 }
