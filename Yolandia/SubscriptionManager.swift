@@ -18,14 +18,14 @@ class SubscriptionManager {
         
         let notificationInfo = CKNotificationInfo()
         notificationInfo.alertActionLocalizationKey = "LOCAL_NOTIFICATION_KEY"
-//        notificationInfo.soundName = ".aiff"
+        //        notificationInfo.soundName = ".aiff"
         notificationInfo.shouldBadge = true
         
         subscription.notificationInfo = notificationInfo
         
         let publicDatabase = CKContainer.defaultContainer().publicCloudDatabase
         publicDatabase.saveSubscription(subscription, completionHandler: { (returnedSubscription, error) in
-    
+            
             if (error != nil) {
                 println("error=\(error.localizedDescription)")
             } else {

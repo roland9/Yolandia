@@ -46,7 +46,7 @@ class User {
             }
         )
     }
-
+    
     class func saveNewUser(userName: String, completionHandler: ((CKRecord!, NSError!) -> Void)!) {
         assert(userName != nil, "userName mandatory")
         
@@ -71,7 +71,7 @@ class User {
             }
         )
     }
-   
+    
     class func getMyUsers(completionHandler:(([String]!, NSError!) -> Void)!) {
         if (isLocalMockupActive) {
             self.localGetMyUsers(completionHandler)
@@ -89,7 +89,7 @@ class User {
                 let userNamesArray = resultsArray.map( {
                     (userRecord: CKRecord) -> String in
                     return userRecord.objectForKey(userNameField) as String
-                    })
+                })
                 println("found records: \(results)")
                 completionHandler(nil, error)
             } else {

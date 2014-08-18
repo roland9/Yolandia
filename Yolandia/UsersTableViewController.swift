@@ -14,12 +14,12 @@ class UsersTableViewController: UITableViewController, UITableViewDataSource, UI
     
     let cellIdentifier = "UserCell"
     let addCellIdentifier = "AddCell"
-//    var userDataManager = UserDataManager()
-
-   	lazy var UsersArray: [NSString] = [
+    //    var userDataManager = UserDataManager()
+    
+    var UsersArray: [NSString] = [
         "Roland", "Uli", "Any User"
-	]
-
+    ]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.tableView.registerClass(UITableViewCell.classForCoder(), forCellReuseIdentifier: cellIdentifier)
@@ -39,11 +39,11 @@ class UsersTableViewController: UITableViewController, UITableViewDataSource, UI
     
     // UITableView
     
-override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
-return 1
-}
+    override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+        return 1
+    }
     override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-//        return self.userDataManager.users().count
+        //        return self.userDataManager.users().count
         return UsersArray.count
     }
     
@@ -51,7 +51,7 @@ return 1
         let cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as UITableViewCell
         assert(cell != nil, "expected cell object")
         
-//        let userName = self.userDataManager.users()[indexPath.row] as String
+        //        let userName = self.userDataManager.users()[indexPath.row] as String
         let userName = UsersArray[indexPath.row]
         cell.textLabel.text = userName
         
@@ -64,16 +64,16 @@ return 1
         
         return footerView
     }
-
-	override func tableView(tableView: UITableView!, heightForFooterInSection section: Int) -> CGFloat {
-		return 50
-	}
-
+    
+    override func tableView(tableView: UITableView!, heightForFooterInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
     
     // private - data handling
     
     func didReceiveData(notification: NSNotification) {
         self.tableView.reloadData()
     }
-
+    
 }

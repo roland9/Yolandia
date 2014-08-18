@@ -36,8 +36,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate
                 User.saveNewUser(userName, completionHandler: { (savedRecord, error) in
                     
                     if (savedRecord) {
-//                        self.showAlert("Saved Your User Name", message: "Congrats - you claimed your user name")
-
+                        //                        self.showAlert("Saved Your User Name", message: "Congrats - you claimed your user name")
+                        
                         let usersTableViewController = UsersTableViewController(style: UITableViewStyle.Grouped)
                         NSOperationQueue.mainQueue().addOperationWithBlock {
                             self.presentViewController(usersTableViewController, animated: true, completion: nil)
@@ -47,10 +47,10 @@ class ViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate
                         self.showAlert("Somthing Went Wrong...", message: "Oops - could not claim that user name.\nPlease try again later")
                         
                     }
-                    })
+                })
                 
             }
-            })
+        })
         
         return true
     }
@@ -69,7 +69,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.Alert)
         let defaultAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: { action in
             alert.dismissViewControllerAnimated(true, completion: nil)
-            })
+        })
         alert.addAction(defaultAction)
         
         NSOperationQueue.mainQueue().addOperationWithBlock {
