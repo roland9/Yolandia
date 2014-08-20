@@ -37,7 +37,7 @@ class User {
         
         publicDatabase.performQuery(query, inZoneWithID: nil, completionHandler: { (results, error) in
             println("found records \(results) with userName=\(userName)")
-            if (!error) {
+            if (error != nil) {
                 completionHandler(results.count>0, error)
             } else {
                 println("ERROR \(error.localizedDescription) performing query")

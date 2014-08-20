@@ -15,7 +15,7 @@ class UserDataManager {
     init() {
 // todoRG called twice?!?
         User.getMyUsers( { (userNames, error) in
-            if (!error) {
+            if ((error) != nil) {
                 self.usersArray = userNames as [String]
                 NSNotificationCenter.defaultCenter().postNotificationName(kDidReceiveDataNotification, object: nil)
             }

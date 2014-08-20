@@ -16,7 +16,7 @@ class UsersTableViewController: UITableViewController, UITableViewDataSource, UI
     let addCellIdentifier = "AddCell"
     //    var userDataManager = UserDataManager()
     
-    var UsersArray: [NSString] = [
+    lazy var UsersArray: [NSString] = [
         "Roland", "Uli", "Any User"
     ]
     
@@ -26,15 +26,15 @@ class UsersTableViewController: UITableViewController, UITableViewDataSource, UI
         self.tableView.registerClass(AddContactFooterView.classForCoder(), forHeaderFooterViewReuseIdentifier: addCellIdentifier)
     }
     
-//    override func viewDidAppear(animated: Bool) {
-//        super.viewDidAppear(animated)
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didReceiveData:" as Selector, name: kDidReceiveDataNotification, object: nil)
-//    }
-//
-//    override func viewWillDisappear(animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        NSNotificationCenter.defaultCenter().removeObserver(self, name: kDidReceiveDataNotification, object: nil)
-//    }
+    //    override func viewDidAppear(animated: Bool) {
+    //        super.viewDidAppear(animated)
+    //        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didReceiveData:" as Selector, name: kDidReceiveDataNotification, object: nil)
+    //    }
+    //
+    //    override func viewWillDisappear(animated: Bool) {
+    //        super.viewWillDisappear(animated)
+    //        NSNotificationCenter.defaultCenter().removeObserver(self, name: kDidReceiveDataNotification, object: nil)
+    //    }
     
     
     // UITableView
@@ -49,7 +49,7 @@ class UsersTableViewController: UITableViewController, UITableViewDataSource, UI
     
     override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
         let cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as UITableViewCell
-        assert(cell != nil, "expected cell object")
+//        assert(cell, "expected cell object")
         
         //        let userName = self.userDataManager.users()[indexPath.row] as String
         let userName = UsersArray[indexPath.row]

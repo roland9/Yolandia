@@ -25,7 +25,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate
         let userName = textField.text
         
         User.checkIfUserExists(userName, completionHandler: {(doesUserExist, error) in
-            if (error) {
+            if ((error) != nil) {
                 self.showAlert("Error Checking User Name", message: "Please try again later")
                 
             } else if (doesUserExist == true) {
@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UIAlertViewDelegate
                 
                 User.saveNewUser(userName, completionHandler: { (savedRecord, error) in
                     
-                    if (savedRecord) {
+                    if ((savedRecord) != nil) {
                         //                        self.showAlert("Saved Your User Name", message: "Congrats - you claimed your user name")
                         
                         let usersTableViewController = UsersTableViewController(style: UITableViewStyle.Grouped)
