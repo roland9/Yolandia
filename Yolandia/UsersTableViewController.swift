@@ -39,33 +39,33 @@ class UsersTableViewController: UITableViewController, UITableViewDataSource, UI
     
     // UITableView
     
-    override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
-    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         //        return self.userDataManager.users().count
         return UsersArray.count
     }
     
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = self.tableView.dequeueReusableCellWithIdentifier(cellIdentifier) as UITableViewCell
-//        assert(cell, "expected cell object")
+        //        assert(cell, "expected cell object")
         
         //        let userName = self.userDataManager.users()[indexPath.row] as String
         let userName = UsersArray[indexPath.row]
-        cell.textLabel.text = userName
+        cell.textLabel?.text = userName
         
         return cell
     }
     
-    override func tableView(tableView: UITableView!, viewForFooterInSection section: Int) -> UIView! {
+    override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView {
         let footerView = self.tableView.dequeueReusableHeaderFooterViewWithIdentifier(addCellIdentifier) as UITableViewHeaderFooterView
-        assert(footerView != nil, "expected footer view")
+        assert(footerView != .None, "expected footer view")
         
         return footerView
     }
     
-    override func tableView(tableView: UITableView!, heightForFooterInSection section: Int) -> CGFloat {
+    override func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 50
     }
     

@@ -23,7 +23,7 @@ class User {
     
     // public
     class func checkIfUserExists(userName: String, completionHandler: ((Bool!, NSError!) -> Void)!) {
-        assert(userName != nil, "userName mandatory")
+        assert(userName != .None, "userName mandatory")
         
         if (isLocalMockupActive) {
             self.localCheckIfUserExists(userName, completionHandler)
@@ -48,7 +48,7 @@ class User {
     }
     
     class func saveNewUser(userName: String, completionHandler: ((CKRecord!, NSError!) -> Void)!) {
-        assert(userName != nil, "userName mandatory")
+        assert(userName != .None, "userName mandatory")
         
         if (isLocalMockupActive) {
             self.localSaveNewUser(userName, completionHandler)
@@ -61,7 +61,7 @@ class User {
         user.setObject(userName, forKey:userNameField)
         
         publicDatabase.saveRecord(user, completionHandler: { (savedRecord, error) in
-            if (!error) {
+            if (error == nil) {
                 println("saved record: \(savedRecord)")
                 completionHandler(savedRecord, error)
             } else {
@@ -84,7 +84,7 @@ class User {
         let query = CKQuery(recordType: recordTypeMyUsersPrivate, predicate: predicate)
         
         privateDatabase.performQuery(query, inZoneWithID: nil, completionHandler: { (results, error) in
-            if (!error) {
+            if (error == nil) {
                 let resultsArray = results as [CKRecord]
                 let userNamesArray = resultsArray.map( {
                     (userRecord: CKRecord) -> String in
