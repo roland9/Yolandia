@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AddContactFooterView: UITableViewHeaderFooterView {
+class AddContactFooterView: UITableViewHeaderFooterView, UITextFieldDelegate {
     
     lazy var addButton: UIButton = {
         let button = UIButton()
@@ -16,7 +16,7 @@ class AddContactFooterView: UITableViewHeaderFooterView {
         button.titleLabel?.font = UIFont(name: "Avenir", size: 32)
         button.setTitleColor(UIColor.darkGrayColor(), forState: UIControlState.Normal)
         button.setTitle("+", forState: UIControlState.Normal)
-        button.backgroundColor = UIColor.greenColor()
+        button.backgroundColor = UIColor.greenColor().colorWithAlphaComponent(0.7)
         button.layer.cornerRadius = 22
         button.addTarget(self, action: "didSelectAdd:", forControlEvents: UIControlEvents.TouchUpInside)
         return button
@@ -25,14 +25,16 @@ class AddContactFooterView: UITableViewHeaderFooterView {
     lazy var inputTextField: UITextField = {
         let input = UITextField()
         input.setTranslatesAutoresizingMaskIntoConstraints(false)
-        input.backgroundColor = UIColor.yellowColor()
+        input.backgroundColor = UIColor.clearColor()
+        input.returnKeyType = UIReturnKeyType.Send
+        input.delegate = self
         return input
         }()
     
     lazy var backgroundRoundedView: UIView = {
         let view = UIView()
         view.setTranslatesAutoresizingMaskIntoConstraints(false)
-        view.backgroundColor = UIColor.brownColor()
+        view.backgroundColor = UIColor.lightGrayColor()
         view.layer.cornerRadius = 5
         return view
         }()
@@ -55,7 +57,6 @@ class AddContactFooterView: UITableViewHeaderFooterView {
         self.addSubview(backgroundRoundedView)
         self.addSubview(inputTextField)
         self.addSubview(addButton)
-        //        self.setTranslatesAutoresizingMaskIntoConstraints(false)
         self.setNeedsUpdateConstraints()
         
         let views = [
@@ -127,11 +128,26 @@ class AddContactFooterView: UITableViewHeaderFooterView {
     
     // user actions
     func didSelectAdd(sender: UIButton) {
-        UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.BeginFromCurrentState, animations: {() in
-            self.isEnterTextMode = true
-            self.setNeedsUpdateConstraints()
-            self.layoutIfNeeded()
-            }, completion:nil)
         
+        if (self.isEnterTextMode == false) {
+            self.inputTextField.becomeFirstResponder()
+            UIView.animateWithDuration(0.5, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: .BeginFromCurrentState, animations: { () -> Void in
+                self.isEnterTextMode = true
+                self.setNeedsUpdateConstraints()
+                self.layoutIfNeeded()
+                },
+                completion: { finished in
+                    //
+            })
+        } else {
+            self.inputTextField.resignFirstResponder()
+            self.inputTextField.enabled = false
+        }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        textField.enabled = false
+        return true
     }
 }
